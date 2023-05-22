@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="caller" section_id="b02cef3a47baa110eea9ba48436d4355" sys_domain="global" table="sys_script_client" version="3" view="">
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>caller</caption>
+            <header>false</header>
+            <name>sys_script_client</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-05-18 11:13:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b02cef3a47baa110eea9ba48436d4355</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sys_script_client</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Module3" source="x_1052881_module3">c9619ea047b2a510eea9ba48436d4318</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Module3">c9619ea047b2a510eea9ba48436d4318</sys_scope>
+            <sys_update_name>sys_ui_section_b02cef3a47baa110eea9ba48436d4355</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-05-18 11:13:02</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

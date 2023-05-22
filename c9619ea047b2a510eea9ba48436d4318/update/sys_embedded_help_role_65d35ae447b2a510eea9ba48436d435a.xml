@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_1052881_module3.needit_user" name="x_1052881_module3.needit_user">a5d35ae447b2a510eea9ba48436d4358</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-11 05:00:55</sys_created_on>
+        <sys_id>65d35ae447b2a510eea9ba48436d435a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>a5d35ae447b2a510eea9ba48436d4358</sys_name>
+        <sys_package display_value="Module3" source="x_1052881_module3">c9619ea047b2a510eea9ba48436d4318</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Module3">c9619ea047b2a510eea9ba48436d4318</sys_scope>
+        <sys_update_name>sys_embedded_help_role_65d35ae447b2a510eea9ba48436d435a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-11 05:00:55</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

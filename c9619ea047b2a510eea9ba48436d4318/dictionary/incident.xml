@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="email_client=true,hasWorkflow=true,live_feed=true,all_tables.query_hints=true" audit="true" db_object_id="6c8c004724b021108c8bc6863d3fad1c" extends="task" label="Incident" max_length="40" name="incident" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="manager" max_length="40" name="x_1052881_module3_manager" type="string"/>
+        <element label="Phone number" max_length="40" name="x_1052881_module3_phone_number" type="integer"/>
+    </element>
+</database>
