@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
     <sys_script_client action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <applies_extended>false</applies_extended>
         <condition/>
         <description/>
@@ -27,7 +27,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>051e5a6e47f66110eea9ba48436d4345</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Lab onsubmit script3</sys_name>
         <sys_overrides/>
         <sys_package display_value="Module3" source="x_1052881_module3">c9619ea047b2a510eea9ba48436d4318</sys_package>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Module3">c9619ea047b2a510eea9ba48436d4318</sys_scope>
         <sys_update_name>sys_script_client_051e5a6e47f66110eea9ba48436d4345</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-05-25 05:22:23</sys_updated_on>
+        <sys_updated_on>2023-05-25 10:41:35</sys_updated_on>
         <table>x_1052881_module3_employee_info</table>
         <type>onSubmit</type>
         <ui_type>0</ui_type>

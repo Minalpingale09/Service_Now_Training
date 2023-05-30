@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Calling the company on change of user name</description>
+        <field>caller_id</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages>adding client script for populating company on change of caller field</messages>
+        <name>Company_calling</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (newValue === '') {
+      return;
+   }
+   
+	// creating an object of GlideAjax
+  var getCompanyName = new GlideAjax('GetCompany');
+	
+  // Specify the getCompany method
+  getCompany.addParam('sysparm_name','getCompany');
+  // Pass the Requested for sys_id
+  getCompany.addParam('sysparm_userID', g_form.getValue('u_requested_for'));
+  // Send the request to the server
+  getCompany.getXML(populateCompanyField);
+
+
+  // When the response is back from the server
+  function populateCompanyField(response){
+    // Extract the email address from the response, clear any value from the email field, 
+    // set new value in the email field
+    var companyNameFromScriptInclude = response.responseXML.documentElement.getAttribute("answer");
+    g_form.clearValue('u_requested_for_companyName');
+    g_form.setValue('u_requested_for_companyName',companyNameFromScriptInclude);
+  }
+	
+ 
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-29 06:49:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e83d4b1647432110eea9ba48436d4301</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Company_calling</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Module3" source="x_1052881_module3">c9619ea047b2a510eea9ba48436d4318</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Module3">c9619ea047b2a510eea9ba48436d4318</sys_scope>
+        <sys_update_name>sys_script_client_e83d4b1647432110eea9ba48436d4301</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-29 09:18:59</sys_updated_on>
+        <table>incident</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Module3">c9619ea047b2a510eea9ba48436d4318</application>
+        <file_path/>
+        <instance_id>f7cc100ddbc4d9d8387021c405961988</instance_id>
+        <instance_name>dev128826</instance_name>
+        <name>sys_script_client_e83d4b1647432110eea9ba48436d4301</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;Calling the company on change of user name&lt;/description&gt;&lt;field&gt;caller_id&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages&gt;adding client script for populating company on change of caller field&lt;/messages&gt;&lt;name&gt;Company_calling&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (newValue === '') {
+      return;
+   }
+   
+	// creating an object of GlideAjax
+  var getCompanyName = new GlideAjax('GetCompany');
+	
+  // Specify the getCompany method
+  getCompany.addParam('sysparm_name','getCompany');
+  // Pass the Requested for sys_id
+  getCompany.addParam('sysparm_userID', g_form.getValue('u_requested_for'));
+  // Send the request to the server
+  getCompany.getXML(populateCompanyField);
+
+
+  // When the response is back from the server
+  function populateCompanyField(response){
+    // Extract the email address from the response, clear any value from the email field, 
+    // set new value in the email field
+    var companyNameFromScriptInclude = response.responseXML.documentElement.getAttribute("answer");
+    g_form.clearValue('u_requested_for_companyName');
+    g_form.setValue('u_requested_for_companyName',companyNameFromScriptInclude);
+  }
+	
+ 
+}
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-05-29 06:49:41&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;e83d4b1647432110eea9ba48436d4301&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name&gt;Company_calling&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Module3" source="x_1052881_module3"&gt;c9619ea047b2a510eea9ba48436d4318&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Module3"&gt;c9619ea047b2a510eea9ba48436d4318&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_e83d4b1647432110eea9ba48436d4301&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-05-29 09:18:59&lt;/sys_updated_on&gt;&lt;table&gt;incident&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1744834170</payload_hash>
+        <record_name>Company_calling</record_name>
+        <reverted_from/>
+        <source>75449fcc4703e510eea9ba48436d43d9</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-29 09:18:59</sys_created_on>
+        <sys_id>d18b73de47c32110eea9ba48436d434f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18866cdbe9f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-29 09:18:59</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>d98b73defbc321101bd35aeed14af54e</update_guid>
+        <update_guid_history>d98b73defbc321101bd35aeed14af54e:-1744834170,d88ab75e8ec3211065fe2a16415adf94:1775796038,7513fbd671c321108956db3dbd9049d2:773954278,f692bf564cc32110d4b9dbf3e63bc997:-379551590,8b613756aec3211065f812efbfe05e01:727613665,1afc53d2e083211045a10229df30c52b:1073277019,5e59dbdef5432110cf0627598c24200e:-1967545786</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-29 10:16:00</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>002c657998e747d285a5b79c23240229</sys_id>
+        <sys_metadata>e83d4b1647432110eea9ba48436d4301</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Company_calling</sys_name>
+        <sys_package display_value="Module3" source="x_1052881_module3">c9619ea047b2a510eea9ba48436d4318</sys_package>
+        <sys_parent display_value="Incident">6c8c004724b021108c8bc6863d3fad1c</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Module3">c9619ea047b2a510eea9ba48436d4318</sys_scope>
+        <sys_scope_delete display_value="">d6e5f3c77f1f4cd1bfc4b1734f8a3c31</sys_scope_delete>
+        <sys_update_name>sys_script_client_e83d4b1647432110eea9ba48436d4301</sys_update_name>
+        <sys_update_version display_value="sys_script_client_e83d4b1647432110eea9ba48436d4301">d18b73de47c32110eea9ba48436d434f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-29 10:16:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

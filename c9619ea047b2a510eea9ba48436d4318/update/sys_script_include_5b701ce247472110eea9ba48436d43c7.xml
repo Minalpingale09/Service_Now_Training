@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1052881_module3.GetCompanyName</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Populating  company name </description>
+        <name>GetCompanyName</name>
+        <script><![CDATA[var GetCompanyName = Class.create();
+GetCompanyName.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    getCompany: function() {
+        var objName = new GlideRecordSecure("sys_user");
+        objName.get(this.getParameter('sysparm_userID'));
+        return objName.company + '';
+    },
+    type: 'GetCompanyName'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-29 10:56:21</sys_created_on>
+        <sys_id>5b701ce247472110eea9ba48436d43c7</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>GetCompanyName</sys_name>
+        <sys_package display_value="Module3" source="x_1052881_module3">c9619ea047b2a510eea9ba48436d4318</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Module3">c9619ea047b2a510eea9ba48436d4318</sys_scope>
+        <sys_update_name>sys_script_include_5b701ce247472110eea9ba48436d43c7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-30 09:53:59</sys_updated_on>
+    </sys_script_include>
+</record_update>
